@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Verification Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f2f5;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .page-title {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .form-box {
+      padding: 20px;
+    }
+
+    .form-box h3 {
+      margin-bottom: 5px;
+      font-size: 22px;
+      color: #34495e;
+    }
+
+    .form-box p {
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      flex: 1;
+      min-width: 48%;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background: #27ae60;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .submit-btn:hover {
+      background: #1e8449;
+    }
+
+    @media (max-width: 600px) {
+      .form-row {
+        flex-direction: column;
+      }
+
+      .form-group {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="page-title">Verification Page</h2>
+
+    <div class="form-box">
+      <h3>🔒 Data Breach Dashboard</h3>
+      <p>Please verify your identity to continue</p>
+
+      <form id="verificationForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="dob">Date of Birth (MM/DD/YYYY)</label>
+            <input type="text" id="dob" required />
+          </div>
+          <div class="form-group">
+            <label for="ssn">Last Four Digits of SSN</label>
+            <input type="text" id="ssn" maxlength="4" required />
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('verificationForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const firstName = document.getElementById('firstName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
+      const dob = document.getElementById('dob').value.trim();
+      const ssn = document.getElementById('ssn').value.trim();
+
+      if (firstName && lastName && dob && ssn.length === 4) {
+        alert('Verification submitted successfully!');
+        // You can redirect or process the data here
+      } else {
+        alert('Please fill in all fields correctly.');
+      }
+    });
+  </script>
+</body>
+</html>

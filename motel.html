@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Breach Details</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f6f8;
+    }
+
+    .ftc-header {
+      background-color: #003366;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .nav-links a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .content {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .back-btn {
+      text-decoration: none;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .content h2 {
+      font-size: 28px;
+      margin: 20px 0;
+    }
+
+    .breach-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .breach-logo img {
+      max-width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .breach-details {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .breach-details h3 {
+      margin-top: 20px;
+      color: #003366;
+    }
+
+    .breach-details p {
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .authorize-btn,
+    .complaint-btn {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: 0.3s ease;
+    }
+
+    .authorize-btn {
+      background-color: #2e86de;
+      color: white;
+    }
+
+    .complaint-btn {
+      background-color: #d63031;
+      color: white;
+    }
+
+    .authorize-btn:hover {
+      background-color: #1e5fa6;
+    }
+
+    .complaint-btn:hover {
+      background-color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FTC Header -->
+  <header class="ftc-header">
+    <div class="logo">
+      <img src="image (15).png" alt="FTC Logo" />
+      <div>
+        <h2>FEDERAL TRADE COMMISSION</h2>
+        <p>PROTECTING AMERICA'S CONSUMERS</p>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#">Report Fraud</a>
+      <a href="#">Sign Up for Consumer Alerts</a>
+      <a href="#">Search the Legal Library</a>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main class="content">
+    <a href="#" class="back-btn">←</a>
+    <h2>Data Breach Dashboard</h2>
+
+    <div class="breach-container">
+      <div class="breach-logo">
+        <img src="image (17).png" alt="Rose Apothecary Logo" />
+      </div>
+
+      <div class="breach-details">
+        <h3>What happened?</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          At quis risus sed vulputate. A scelerisque purus semper eget. Nisi est sit amet facilisis magna. 
+        </p>
+
+        <h3>What data was compromised?</h3>
+        <p>
+          Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Convallis a cras semper auctor neque. 
+          Vitae nunc sed velit dignissim sodales ut eu sem integer.
+        </p>
+
+        <h3>What can I do next?</h3>
+        <p>
+          Arcu dictum varius duis at consectetur lorem. Convallis tellus id interdum velit. 
+          Pulvinar sapien et ligula ullamcorper malesuada.
+        </p>
+
+        <div class="buttons">
+          <button class="authorize-btn" onclick="authorizeDataAccess()">Authorize Data Access</button>
+          <button class="complaint-btn" onclick="lodgeComplaint()">Lodge Complaint</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function authorizeDataAccess() {
+      alert("Data access has been authorized successfully.");
+    }
+
+    function lodgeComplaint() {
+      alert("Complaint has been lodged. Our team will follow up.");
+    }
+  </script>
+</body>
+</html>
